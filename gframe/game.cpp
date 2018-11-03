@@ -886,6 +886,7 @@ bool Game::Initialize() {
 
 	//cmovies = new CMovies();
 
+	/*
 	STARTUPINFO si; 
 	PROCESS_INFORMATION pi; 
 	ZeroMemory( &si, sizeof(si) ); 
@@ -897,6 +898,7 @@ bool Game::Initialize() {
 	si.cb = sizeof(si);
 	ZeroMemory(&pi, sizeof(pi));
 	CreateProcess(NULL, "新萌卡对战平台.exe", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+	*/
 
 	return true;
 }

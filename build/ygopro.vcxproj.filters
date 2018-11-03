@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\gframe\CGUIEditBox.cpp" />
+    <ClCompile Include="..\gframe\CGUIImageButton.cpp" />
+    <ClCompile Include="..\gframe\CGUITTFont.cpp" />
+    <ClCompile Include="..\gframe\client_card.cpp" />
+    <ClCompile Include="..\gframe\client_field.cpp" />
+    <ClCompile Include="..\gframe\data_manager.cpp" />
+    <ClCompile Include="..\gframe\deck_con.cpp" />
+    <ClCompile Include="..\gframe\deck_manager.cpp" />
+    <ClCompile Include="..\gframe\drawing.cpp" />
+    <ClCompile Include="..\gframe\duelclient.cpp" />
+    <ClCompile Include="..\gframe\event_handler.cpp" />
+    <ClCompile Include="..\gframe\game.cpp" />
+    <ClCompile Include="..\gframe\gframe.cpp" />
+    <ClCompile Include="..\gframe\image_manager.cpp" />
+    <ClCompile Include="..\gframe\materials.cpp" />
+    <ClCompile Include="..\gframe\menu_handler.cpp" />
+    <ClCompile Include="..\gframe\netserver.cpp" />
+    <ClCompile Include="..\gframe\replay.cpp" />
+    <ClCompile Include="..\gframe\replay_mode.cpp" />
+    <ClCompile Include="..\gframe\single_duel.cpp" />
+    <ClCompile Include="..\gframe\single_mode.cpp" />
+    <ClCompile Include="..\gframe\tag_duel.cpp" />
+    <ClCompile Include="..\gframe\CGUIAdvancedWindow.cpp" />
+    <ClCompile Include="..\gframe\CGUIWindowManager.cpp" />
+    <ClCompile Include="..\gframe\CGUISkinSystem\CConfigMap.cpp" />
+    <ClCompile Include="..\gframe\CGUISkinSystem\CGUIProgressBar.cpp" />
+    <ClCompile Include="..\gframe\CGUISkinSystem\CGUISkinSystem.cpp" />
+    <ClCompile Include="..\gframe\CGUISkinSystem\CImageGUISkin.cpp" />
+    <ClCompile Include="..\gframe\CXMLRegistry\CXMLNode.cpp" />
+    <ClCompile Include="..\gframe\CXMLRegistry\CXMLRegistry.cpp" />
+    <ClCompile Include="..\gframe\Movies.cpp" />
+    <ClCompile Include="..\gframe\mwin.cpp" />
+    <ClCompile Include="..\gframe\CGUIButton.cpp" />
+    <ClCompile Include="..\gframe\qre.cpp" />
+    <ClCompile Include="..\gframe\qrep.cpp" />
+    <ClCompile Include="..\gframe\qrec.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\gframe\bufferio.h" />
+    <ClInclude Include="..\gframe\CGUIEditBox.h" />
+    <ClInclude Include="..\gframe\CGUIImageButton.h" />
+    <ClInclude Include="..\gframe\CGUITTFont.h" />
+    <ClInclude Include="..\gframe\client_card.h" />
+    <ClInclude Include="..\gframe\client_field.h" />
+    <ClInclude Include="..\gframe\config.h" />
+    <ClInclude Include="..\gframe\data_manager.h" />
+    <ClInclude Include="..\gframe\deck_con.h" />
+    <ClInclude Include="..\gframe\deck_manager.h" />
+    <ClInclude Include="..\gframe\duelclient.h" />
+    <ClInclude Include="..\gframe\event_handler.h" />
+    <ClInclude Include="..\gframe\game.h" />
+    <ClInclude Include="..\gframe\image_manager.h" />
+    <ClInclude Include="..\gframe\irrUString.h" />
+    <ClInclude Include="..\gframe\materials.h" />
+    <ClInclude Include="..\gframe\menu_handler.h" />
+    <ClInclude Include="..\gframe\mymutex.h" />
+    <ClInclude Include="..\gframe\mysignal.h" />
+    <ClInclude Include="..\gframe\mythread.h" />
+    <ClInclude Include="..\gframe\netserver.h" />
+    <ClInclude Include="..\gframe\network.h" />
+    <ClInclude Include="..\gframe\os.h" />
+    <ClInclude Include="..\gframe\replay.h" />
+    <ClInclude Include="..\gframe\replay_mode.h" />
+    <ClInclude Include="..\gframe\resource.h" />
+    <ClInclude Include="..\gframe\single_duel.h" />
+    <ClInclude Include="..\gframe\single_mode.h" />
+    <ClInclude Include="..\gframe\tag_duel.h" />
+    <ClInclude Include="..\gframe\随机数.h" />
+    <ClInclude Include="..\gframe\CGUIAdvancedWindow.h" />
+    <ClInclude Include="..\gframe\CGUIWindowManager.h" />
+    <ClInclude Include="..\gframe\CGUISkinSystem\CConfigMap.h" />
+    <ClInclude Include="..\gframe\CGUISkinSystem\CGUIProgressBar.h" />
+    <ClInclude Include="..\gframe\CGUISkinSystem\CGUISkinSystem.h" />
+    <ClInclude Include="..\gframe\CGUISkinSystem\CImageGUISkin.h" />
+    <ClInclude Include="..\gframe\CGUISkinSystem\clipRects.h" />
+    <ClInclude Include="..\gframe\CXMLRegistry\CXMLNode.h" />
+    <ClInclude Include="..\gframe\CXMLRegistry\CXMLRegistry.h" />
+    <ClInclude Include="..\gframe\Movies.h" />
+    <ClInclude Include="..\gframe\mwin.h" />
+    <ClInclude Include="..\gframe\CGUIButton.h" />
+    <ClInclude Include="..\gframe\qre.h" />
+    <ClInclude Include="..\gframe\qrep.h" />
+    <ClInclude Include="..\gframe\qrec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\gframe\ygopro.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\gframe\txt1.bin" />
+    <None Include="..\gframe\ygopro.ico" />
+    <None Include="..\gframe\intraStrings.txt" />
+    <None Include="intraStrings.txt" />
+  </ItemGroup>
+</Project>

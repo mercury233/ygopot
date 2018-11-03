@@ -1,0 +1,56 @@
+#include "resource.h"
+
+#pragma code_page(65001)
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+1                       ICON                    "ygopro.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TXT
+//
+
+INTRA                   TXT                     "intraStrings.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 1,0,33,7
+ PRODUCTVERSION 1,0,33,7
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x0L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Kelypot"
+            VALUE "FileDescription", "YGOPot 1.033.7 V2 发布日期：2015.11.12"
+            VALUE "FileVersion", "1.033.7 v2"
+            VALUE "InternalName", "YGOPot 1.033.7 V2"
+            VALUE "LegalCopyright", "Kelypot 2015"
+            VALUE "OriginalFilename", "YGOPot.exe"
+            VALUE "ProductName", "YGOPot"
+            VALUE "ProductVersion", "1.033.7 V2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END

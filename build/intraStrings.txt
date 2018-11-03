@@ -1,0 +1,10 @@
+﻿//string
+!string 1 静水服务器
+!string 2 本地局域网(AI)
+!string 3 亲，我们的网络有问题，请再试一次
+!string 4 静水服务器正在为你分配房间
+!string 5 请选择服务器或房间
+!string 6 请选择服务器或房间
+!string 7 游戏版本与静水服务器不一致
+
+

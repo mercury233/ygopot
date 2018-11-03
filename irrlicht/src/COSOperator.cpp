@@ -52,8 +52,11 @@ const core::stringc& COSOperator::getOperatingSystemVersion() const
 
 
 //! copies text to the clipboard
-void COSOperator::copyToClipboard(const c8* text) const
+void COSOperator::copyToClipboard(const c16* text) const
 {
+	if (wcslen(text)==0)
+		return;
+
 // Windows version
 #if defined(_IRR_XBOX_PLATFORM_)
 #elif defined(_IRR_WINDOWS_API_)
@@ -63,30 +66,15 @@ void COSOperator::copyToClipboard(const c8* text) const
 	EmptyClipboard();
 
 	HGLOBAL clipbuffer;
-
-#if defined(_UNICODE)
-	wchar_t * utext = (wchar_t *)text;
 	wchar_t * buffer;
 
-	clipbuffer = GlobalAlloc(GMEM_DDESHARE, sizeof(wchar_t) * (wcslen(utext)+1));
+	clipbuffer = GlobalAlloc(GMEM_DDESHARE, sizeof(wchar_t) * (wcslen(text) + 1));
 	buffer = (wchar_t*)GlobalLock(clipbuffer);
 
-	wcscpy(buffer, utext);
+	wcscpy(buffer, text);
 
 	GlobalUnlock(clipbuffer);
 	SetClipboardData(CF_UNICODETEXT, clipbuffer);
-#else
-	char * buffer;
-
-	clipbuffer = GlobalAlloc(GMEM_DDESHARE, strlen(text)+1);
-	buffer = (char*)GlobalLock(clipbuffer);
-
-	strcpy(buffer, text);
-
-	GlobalUnlock(clipbuffer);
-	SetClipboardData(CF_TEXT, clipbuffer);
-#endif
-
 	CloseClipboard();
 
 // MacOSX version
@@ -105,7 +93,7 @@ void COSOperator::copyToClipboard(const c8* text) const
 
 //! gets text from the clipboard
 //! \return Returns 0 if no string is in there.
-const c8* COSOperator::getTextFromClipboard() const
+const c16* COSOperator::getTextFromClipboard() const
 {
 #if defined(_IRR_XBOX_PLATFORM_)
 		return 0;
@@ -113,14 +101,10 @@ const c8* COSOperator::getTextFromClipboard() const
 	if (!OpenClipboard(NULL))
 		return 0;
 
-	char * buffer = 0;
+	wchar_t * buffer = 0;
 
-#ifdef _UNICODE
 	HANDLE hData = GetClipboardData( CF_UNICODETEXT );
-#else
-	HANDLE hData = GetClipboardData( CF_UNICODETEXT );
-#endif
-	buffer = (char*)GlobalLock( hData );
+	buffer = (wchar_t*)GlobalLock( hData );
 	GlobalUnlock( hData );
 	CloseClipboard();
 	return buffer;

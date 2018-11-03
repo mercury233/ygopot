@@ -286,7 +286,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
 				const s32 realmbgn = MarkBegin < MarkEnd ? MarkBegin : MarkEnd;
 				const s32 realmend = MarkBegin < MarkEnd ? MarkEnd : MarkBegin;
 
-				core::stringc s;
+				core::stringw s;
 				s = Text.subString(realmbgn, realmend - realmbgn).c_str();
 				Operator->copyToClipboard(s.c_str());
 			}
@@ -299,7 +299,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
 				const s32 realmend = MarkBegin < MarkEnd ? MarkEnd : MarkBegin;
 
 				// copy
-				core::stringc sc;
+				core::stringw sc;
 				sc = Text.subString(realmbgn, realmend - realmbgn).c_str();
 				Operator->copyToClipboard(sc.c_str());
 
@@ -329,20 +329,22 @@ bool CGUIEditBox::processKey(const SEvent& event)
 				const s32 realmend = MarkBegin < MarkEnd ? MarkEnd : MarkBegin;
 
 				// add new character
-				const c8* p = Operator->getTextFromClipboard();
+				const c16* p = Operator->getTextFromClipboard();
 				if (p)
 				{
+					irr::core::stringw widep(p);
+
 					if (MarkBegin == MarkEnd)
 					{
 						// insert text
 						core::stringw s = Text.subString(0, CursorPos);
-						s.append(p);
+						s.append(widep);
 						s.append( Text.subString(CursorPos, Text.size()-CursorPos) );
 
 						if (!Max || s.size()<=Max) // thx to Fish FH for fix
 						{
 							Text = s;
-							s = p;
+							s = widep;
 							CursorPos += s.size();
 						}
 					}
@@ -351,13 +353,13 @@ bool CGUIEditBox::processKey(const SEvent& event)
 						// replace text
 
 						core::stringw s = Text.subString(0, realmbgn);
-						s.append(p);
+						s.append(widep);
 						s.append( Text.subString(realmend, Text.size()-realmend) );
 
 						if (!Max || s.size()<=Max)  // thx to Fish FH for fix
 						{
 							Text = s;
-							s = p;
+							s = widep;
 							CursorPos = realmbgn + s.size();
 						}
 					}

@@ -137,7 +137,7 @@ bool DataManager::LoadStrings(const char* file) {
 	//new
 	for(int i = 0; i < 2048; ++i)
 		intraStrings[i] = (wchar_t *)unknown_string;
-	HRSRC hRes = ::FindResource(NULL ,"intra","TXT");
+	/*HRSRC hRes = ::FindResource(NULL ,"intra","TXT");
 	HGLOBAL hgRes = LoadResource(NULL, hRes);
 	LPVOID pRes = LockResource(hgRes);
 	char* streambuff=(char*)pRes;
@@ -154,7 +154,7 @@ bool DataManager::LoadStrings(const char* file) {
 			wcscpy(pbuf, strBuffer);
 			intraStrings[value] = pbuf;
 		}
-	}
+	}*/
 	//
 
 	std::wifstream scConf("setcode.conf");

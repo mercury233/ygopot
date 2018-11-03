@@ -124,7 +124,6 @@
     <ClInclude Include="..\gframe\bufferio.h" />
     <ClInclude Include="..\gframe\CGUIAdvancedWindow.h" />
     <ClInclude Include="..\gframe\CGUIButton.h" />
-    <ClInclude Include="..\gframe\CGUIEditBox.h" />
     <ClInclude Include="..\gframe\CGUIImageButton.h" />
     <ClInclude Include="..\gframe\CGUISkinSystem\CConfigMap.h" />
     <ClInclude Include="..\gframe\CGUISkinSystem\CGUIProgressBar.h" />
@@ -170,8 +169,6 @@
   <ItemGroup>
     <ClCompile Include="..\gframe\CGUIAdvancedWindow.cpp" />
     <ClCompile Include="..\gframe\CGUIButton.cpp" />
-    <ClCompile Include="..\gframe\CGUIEditBox.cpp">
-    </ClCompile>
     <ClCompile Include="..\gframe\CGUIImageButton.cpp">
     </ClCompile>
     <ClCompile Include="..\gframe\CGUISkinSystem\CConfigMap.cpp" />
